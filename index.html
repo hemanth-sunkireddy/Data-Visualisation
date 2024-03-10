@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Imports -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website for visualisation of the Data Viz project">
+
+  <!-- Title of the Website -->
+  <title>Data Visualisation Project</title>
+
+  <!-- Adding Bootstrap Links -->
+  <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+
+</head>
+
+<body style="background-color: floralwhite;">
+
+  <div class="container">
+    <h1 class="text-center">
+      Data Visualisation Practice
+    </h1>
+    <hr class="w-75 m-lg-5 p-1">
+    <!-- Adding Visualisations  -->
+    <div id="first_row" class="container">
+    </div>
+ 
+    <hr class="w-75 m-lg-5 p-1">
+
+    <!-- Adding Shapes -->
+    <div class="container">
+      <h2 class="text-center">
+        Lines
+      </h2>
+      <div>
+        <svg>
+          <line x1="0" y1="0" x2="0" y2="100" style="stroke: black;"></line>
+        </svg>
+        <svg>
+          <line x1="1" y1="1" x2="100" y2="0" style="stroke: black;"></line>
+        </svg>
+      </div>
+    </div>
+    
+    <hr class="w-75 m-lg-5 p-1">
+
+    <!-- Adding Circles -->
+    <div class="container">
+      <h2 class="text-center">Circle</h2>
+      <svg>
+        <circle cx="150" cy="50" r="50" stroke-width="4" stroke="blue" fill="yellow"></circle>
+      </svg>
+    </div>
+    <hr class="w-75 m-lg-5 p-1">
+
+    
+
+    <!-- Adding D3 JS scripts -->
+    <script src="d3_cdn/d3.v7.js"></script>
+    <script src="d3_cdn/d3.v7.min.js"></script>
+
+    <!-- Adding Graph Files -->
+    <script type="module" src="scripts/xycoorindates.js"></script>
+    <script type="module" src="scripts/rectangle.js"></script>
+    <script type="module" src="scripts/line.js"></script>
+
+</body>
+
+</div>
+
+</html>

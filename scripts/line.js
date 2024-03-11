@@ -7,46 +7,47 @@ const marginBottom = 50;
 const marginLeft = 50;
 
 // Declare the x (horizontal position) scale.
-const x = d3.scaleLinear()
-    .domain([0, 100])
-    .range([marginLeft, width - marginRight]);
+const x = d3
+  .scaleLinear()
+  .domain([0, 100])
+  .range([marginLeft, width - marginRight]);
 
 // Declare the y (vertical position) scale.
-const y = d3.scaleLinear()
-    .domain([0, 100])
-    .range([height - marginBottom, marginTop]);
-
-
+const y = d3
+  .scaleLinear()
+  .domain([0, 100])
+  .range([height - marginBottom, marginTop]);
 
 // Create the SVG container.
-const svg = d3.create("svg")
-    .attr("width", width)
-    .attr("height", height);
+const svg = d3.create("svg").attr("width", width).attr("height", height);
 
 // Add the x-axis without transition.
-const gx = svg.append("g")
-    .attr("transform", `translate(0,${height - marginBottom})`)
-    
-    .call(d3.axisBottom(x))
-    ;
+const gx = svg
+  .append("g")
+  .attr("transform", `translate(0,${height - marginBottom})`)
 
+  .call(d3.axisBottom(x));
 // Add the y-axis.
-const gy = svg.append("g")
-    .attr("transform", `translate(${marginLeft},0)`)
-    .call(d3.axisLeft(y));
-
-
+const gy = svg
+  .append("g")
+  .attr("transform", `translate(${marginLeft},0)`)
+  .call(d3.axisLeft(y));
 
 // Define the line data
-const lineData = [{ x: 20, y: 80 }, { x: 80, y: 20 }];
+const lineData = [
+  { x: 20, y: 80 },
+  { x: 80, y: 20 },
+];
 
 // Create a line generator function
-const lineGenerator = d3.line()
-  .x(d => x(d.x))
-  .y(d => y(d.y));
+const lineGenerator = d3
+  .line()
+  .x((d) => x(d.x))
+  .y((d) => y(d.y));
 
 // Append the line to the SVG
-svg.append("path")
+svg
+  .append("path")
   .datum(lineData)
   .attr("fill", "none")
   .attr("stroke", "steelblue")

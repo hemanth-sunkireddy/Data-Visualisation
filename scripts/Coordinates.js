@@ -34,5 +34,19 @@ const gy = svg.append("g")
     .call(d3.axisLeft(y));
 
 
+// Adding X Axis title.
+svg.append("text")
+  .attr("x", "-90")
+  .attr("y", "20")
+  .attr("transform", "rotate(-90,20,20)")
+  .text("y-axis");
+
+// Adding Y Axis title 
+svg.append("text")
+  .attr("x", "100")
+  .attr("y", "300")
+  .text("x-axis");
+
+
 // Append the SVG element.
 first_row.append(svg.node());

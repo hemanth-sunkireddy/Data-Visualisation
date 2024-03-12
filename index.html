@@ -20,11 +20,11 @@
 
   <div class="container">
     <h1 class="text-center">
-      Data Visualisation Practice
+      Data Visualisation
     </h1>
     <hr class="w-75 m-lg-5 p-1">
     <!-- Adding Visualisations  -->
-    <div id="first_row" class="container">
+    <div id="first_row" class="container m-auto">
     </div>
 
     <hr class="w-75 m-lg-5 p-1">
@@ -57,7 +57,7 @@
     </div>
     <hr class="w-75 m-lg-5 p-1">
 
-    <!-- Adding Circles -->
+    <!-- Adding Rectangle -->
     <div class="container">
       <h2 class="text-center">Rectangle</h2>
       <svg width="1000" height="200">
@@ -69,26 +69,40 @@
     </div>
     <hr class="w-75 m-lg-5 p-1">
 
-
+   <!-- Adding Ellipse  -->
     <div class="container">
-      <h2 class="text-center">Rectangle</h2>
+      <h2 class="text-center">Ellipse</h2>
       <svg width="1000" height="200">
-      <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
-      <rect x="250" y="50" width="60" height="80" stroke="blue" fill="pink"></rect>
-      <rect x="400" y="50" width="60" height="100" stroke="black" fill="blue"></rect>
-      <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
+        <ellipse rx="100" ry="10" cx="120" cy="180"
+        style="fill:yellow;stroke:green;stroke-width:3" />
+        <ellipse rx="20" ry="40" cx="350" cy="80"
+        style="fill:red;stroke:black;stroke-width:3" />
       </svg>
     </div>
     <hr class="w-75 m-lg-5 p-1">
+
+    <!-- Adding Load CSV content  -->
+    <div class="container"  id="load_csv">
+      <h2 class="text-center">Loading CSV File</h2>
+    </div>
+    <hr class="w-75 m-lg-5 p-1">
+
+     <!-- Adding ToolTip Content  -->
+     <!-- <div class="container" id="tool_tip">
+      <h2 class="text-center">Adding ToolTip</h2>
+    </div>
+    <hr class="w-75 m-lg-5 p-1"> -->
 
     <!-- Adding D3 JS scripts -->
     <script src="d3_cdn/d3.v7.js"></script>
     <script src="d3_cdn/d3.v7.min.js"></script>
 
     <!-- Adding Graph Files -->
-    <script type="module" src="scripts/xycoorindates.js"></script>
-    <script type="module" src="scripts/rectangle.js"></script>
-    <script type="module" src="scripts/line.js"></script>
+    <script type="module" src="scripts/Coordinates.js"></script>
+    <script type="module" src="scripts/BarGraph.js"></script>
+    <script type="module" src="scripts/Linear.js"></script>
+    <script type="module" src="scripts/LoadCsv.js"></script>
+    <script type="module" src="scripts/ToolTip.js"></script>
 
 </body>
 

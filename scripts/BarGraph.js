@@ -31,13 +31,25 @@ const gy = svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y));
 
-// Adding the properties of the rectangle. 
+// Adding X Axis title.
+svg.append("text")
+  .attr("x", "-90")
+  .attr("y", "20")
+  .attr("transform", "rotate(-90,20,20)")
+  .text("y-axis");
+
+// Adding Y Axis title 
+svg.append("text")
+  .attr("x", "100")
+  .attr("y", "300")
+  .text("x-axis");
+
 
 // Add the path using this helper function
 svg.append('rect')
-    .attr('x', 100)
+    .attr('x', 50)
     .attr('y', 100)
-    .attr('width', 300)
+    .attr('width', 200)
     .attr('height', 40)
     .attr('stroke', 'black')
     .attr('fill', '#69a3b2');

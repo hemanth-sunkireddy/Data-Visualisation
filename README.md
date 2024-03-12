@@ -1,3 +1,7 @@
+## How to view: 
+1. Clone or download the zip folder.
+2. Open index.html 
+
 ## Lab 1:
 ### Things done:
 1. XY Coordinates, Line Graph and Rectangle (Bar Graph) done. 

@@ -61,37 +61,61 @@
     <div class="container">
       <h2 class="text-center">Rectangle</h2>
       <svg width="1000" height="200">
-      <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
-      <rect x="250" y="50" width="60" height="80" stroke="blue" fill="pink"></rect>
-      <rect x="400" y="50" width="60" height="100" stroke="black" fill="blue"></rect>
-      <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
+        <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
+        <rect x="250" y="50" width="60" height="80" stroke="blue" fill="pink"></rect>
+        <rect x="400" y="50" width="60" height="100" stroke="black" fill="blue"></rect>
+        <rect x="50" y="50" width="60" height="60" stroke="red" fill="yellow"></rect>
       </svg>
     </div>
     <hr class="w-75 m-lg-5 p-1">
 
-   <!-- Adding Ellipse  -->
+    <!-- Adding Ellipse  -->
     <div class="container">
       <h2 class="text-center">Ellipse</h2>
       <svg width="1000" height="200">
-        <ellipse rx="100" ry="10" cx="120" cy="180"
-        style="fill:yellow;stroke:green;stroke-width:3" />
-        <ellipse rx="20" ry="40" cx="350" cy="80"
-        style="fill:red;stroke:black;stroke-width:3" />
+        <ellipse rx="100" ry="10" cx="120" cy="180" style="fill:yellow;stroke:green;stroke-width:3" />
+        <ellipse rx="20" ry="40" cx="350" cy="80" style="fill:red;stroke:black;stroke-width:3" />
       </svg>
     </div>
     <hr class="w-75 m-lg-5 p-1">
 
     <!-- Adding Load CSV content  -->
-    <div class="container"  id="load_csv">
+    <div class="container" id="load_csv">
       <h2 class="text-center">Loading CSV File</h2>
     </div>
     <hr class="w-75 m-lg-5 p-1">
 
-     <!-- Adding ToolTip Content  -->
-     <!-- <div class="container" id="tool_tip">
-      <h2 class="text-center">Adding ToolTip</h2>
+    <!-- Adding Grouping Elements Content  -->
+    <div class="container" id="group_elements">
+      <h2 class="text-center">Grouping Elements</h2>
+      <svg>
+        <g>
+          <circle cx="100" cy="100" r="20" stroke-width="4" stroke="blue" fill="yellow"></circle>
+          <circle cx="130" cy="100" r="30" stroke-width="4" stroke="red" fill="white"></circle>
+        </g>
+      </svg>
     </div>
-    <hr class="w-75 m-lg-5 p-1"> -->
+    <hr class="w-75 m-lg-5 p-1">
+
+     <!-- Adding ToolTip content  -->
+     <h2 class="text-center">Tool Tip</h2>
+     <button id="button_tool_tip" class="p-lg-2 m-lg-5">
+      Hover to see the Tool Tip
+    </button>
+     <div class="container" id="tool_tip">
+      
+    </div>
+    <div class="container" id="tool_tip2">
+      
+    </div>
+   
+    <hr class="w-75 m-lg-5 p-1">
+
+    <!-- Adding Zoom And Pinch  -->
+    <div class="container" id="zoom_and_pinch">
+      <h2 class="text-center">Zoom And Pinch</h2>
+    </div>
+    <hr class="w-75 m-lg-5 p-1">
 
     <!-- Adding D3 JS scripts -->
     <script src="d3_cdn/d3.v7.js"></script>
@@ -101,11 +125,12 @@
     <script type="module" src="scripts/Coordinates.js"></script>
     <script type="module" src="scripts/BarGraph.js"></script>
     <script type="module" src="scripts/Linear.js"></script>
-    <script type="module" src="scripts/LoadCsv.js"></script>
+    <script type="module" src="scripts/LoadCSV/BarChart.js"></script>
     <script type="module" src="scripts/ToolTip.js"></script>
-
+    <script type="module" src="scripts/LoadCSV/ScatterPlot.js"></script>
+    <script type="module" src="scripts/ToolTip2.js"></script>
+    <script type="module" src="scripts/ZoomAndPinch.js"></script>
+  </div>
 </body>
-
-</div>
 
 </html>

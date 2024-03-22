@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Imports -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website for visualisation of the Data Viz project">
+
+  <!-- Title of the Website -->
+  <title>Data Visualisation Project</title>
+
+  <!-- Adding Bootstrap Links -->
+  <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+
+</head>
+
+<body style="background-color: rgb(155, 242, 244);">
+
+  <div class="container">
+    <h1 class="text-center">
+      Data Visualisation Lab 3
+    </h1>
+    <hr class="w-75 m-lg-5 p-1">
+
+
+    <!-- Adding Load CSV content  -->
+    <div>
+      <h2 class="text-center">Choropleth chart</h2>
+      <!-- Filter Bar -->
+      <div>
+        <p class="fw-bold">Choose Import or Export</p>
+        <p>Export &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Import</p>
+        <input type="range" min="1" max="2" value="1" class="slider" id="slider" />
+        <div class="row">
+          <div class="col-lg-1">
+            <p>0  <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="red"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>0 - 1 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#FEE391"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>1-5 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#762A83"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>6-10 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#C2A5CF"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>11-25 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#F7F7F7"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>26-100 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#D9F0D3"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p>101-1000 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#ACD39E"></circle></svg></span></p>
+          </div>
+          <div class="col-lg-1">
+            <p> > 1000 <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="#1B7837"></circle></svg></span></p>
+          </div>
+        </div>
+        <p>Not Available  <span><svg width="14" height="14"><circle cx="7" cy="7" r="7" fill="black"></circle></svg></span></p>
+      </div>
+        <svg id="world_map" width="1296" height="724"></svg>
+      </div>
+
+
+    </div>
+
+    <hr class="w-75 m-lg-5 p-1">
+
+
+
+    <!-- Adding D3 JS scripts -->
+    <script src="d3_cdn/d3.v7.js"></script>
+    <script src="d3_cdn/d3.v7.min.js"></script>
+
+    <!-- Adding Graph Files -->
+    <script src="scripts/d3-scale-chromatic.v1.min.js"></script>
+    <script src="scripts/d3-geo-projection.v2.min.js"></script>
+    <script type="module" src="scripts/choropleth.js"></script>
+  </div>
+
+</body>
+
+</html>
